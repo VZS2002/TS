@@ -10,11 +10,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 .agileits-top p.hiba{
     
   text-align: left;
-  color: red;
+  color: rgb(20, 124, 16);
   font-size: small;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-style: italic;
+  font-weight: bold;
   }
 
 

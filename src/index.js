@@ -24,5 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
         else {
             document.getElementById('hibae').textContent = 'Hibás email';
         }
+        let jelszo = document.getElementById('jelszo').value;
+        if (jelszo.length > 10 || jelszo.length < 5) {
+            document.getElementById('hibaj').textContent = 'A jelszó 5 és 10 karakter közötti hosszúságú lehet';
+        }
+        else {
+            let kisbetu = /[a-z]/g;
+            let nagybetu = /[A-Z]/g;
+            let szam = /[0-9]/g;
+            if (jelszo.match(kisbetu) && jelszo.match(nagybetu) && jelszo.match(szam)) {
+                document.getElementById('hibaj').textContent = ' ';
+            }
+            else {
+                document.getElementById('hibaj').textContent = 'Rossz jelszó';
+            }
+        }
+        let ujjelszo = document.getElementById('ujjelszo').value;
+        let ujemail = document.getElementById('ujemail').value;
+        if (ujjelszo != jelszo) {
+            document.getElementById('hibaju').textContent = 'Nem egyezik a jelszó';
+        }
+        if (ujemail != email) {
+            document.getElementById('hibeu').textContent = 'Nem egyezik az email';
+        }
     });
 });
